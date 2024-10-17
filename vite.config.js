@@ -8,8 +8,11 @@ export default defineConfig({
     react(),
     federation({
       name: 'reactNewViteRemote',
-      filename: 'remoteReactNewViteEntry.js',
-      // Modules to expose
+      getPublicPath: 'return "http://localhost:4173/"',
+      manifest : {
+        filePath : './assets/',
+        fileName: 'remoteReactViteManifest.json'
+      },
       exposes: {
         './Module': './src/App.jsx',
       },
