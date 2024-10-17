@@ -19,6 +19,10 @@ export default defineConfig({
       shared: ['react', 'react-dom']
     }),
   ],
+  base: 'http://localhost:4173/',
+  server: {
+    origin: 'http://localhost:4173/'
+  },
   build: {
     target: 'esnext',
     minify: false,
